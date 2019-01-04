@@ -6,7 +6,9 @@ A hierarchy that encapsulates many possible 'platforms' and a construction of a 
 
 The `new` operator is considered harmful
 
-- Main difference between the Factory and Abstract Factory pattern is that in the Factory pattern, we are using a single method (that can be overriden to create other objects) and in Abstract Factory we are using an object that is passed as argument in order to create families of objects.
+- Main difference between the Factory and Abstract Factory pattern is that in the Factory pattern is that for a factory, we are using a single method (that can be overriden to create other objects) and in Abstract Factory we are using an object that is passed as argument in order to create families of related/similar objects.
+
+- Program the abstract factory as an interface while products families can either be interfaces or abstract classes.
 
 ### Example:
 
