@@ -1,6 +1,9 @@
 package com.urosht.demo.factory;
 
+import com.urosht.demo.model.BigUFOEnemyShip;
 import com.urosht.demo.model.EnemyShip;
+import com.urosht.demo.model.RocketEnemyShip;
+import com.urosht.demo.model.UFOEnemyShip;
 
 /**
  * Only responsibility of this class is to create Enemy Ships. If new entity classes are to be added,
@@ -18,10 +21,21 @@ public class EnemyShipFactory {
    * @param type
    * @return
    */
-  public EnemyShip buildEnemyShip(String type) {
+  public EnemyShip buildEnemyShip(final String type) {
     EnemyShip enemyShip = null;
 
-    if ()
+    switch (type) {
+      case ROCKET:
+        enemyShip = new RocketEnemyShip();
+        break;
+      case UFO:
+        enemyShip = new UFOEnemyShip();
+        break;
+      case BIG:
+        enemyShip = new BigUFOEnemyShip();
+        break;
+    }
+    return enemyShip;
   }
 
 }

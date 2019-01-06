@@ -10,3 +10,13 @@
 
 - the `new` operator is considered harmful.
 
+
+## Usage
+
+- If we have an inheritance hierarchy that uses polymorphism, we can defina our base class factory method as `static`.
+
+- Design the factory to receive arguments. Think about what qualities are necessary and sufficient to identify the correct class to instantiate.
+
+- Optionally, we could design an internal object pool that will allow objects to be reused instead of created from scratch (Think database connection pools).
+
+- Force the usage of factory by making all constructors `private` or `protected`.
