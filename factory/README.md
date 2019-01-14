@@ -10,7 +10,6 @@
 
 - the `new` operator is considered harmful.
 
-
 ## Usage
 
 - If we have an inheritance hierarchy that uses polymorphism, we can defina our base class factory method as `static`.
@@ -20,3 +19,5 @@
 - Optionally, we could design an internal object pool that will allow objects to be reused instead of created from scratch (Think database connection pools).
 
 - Force the usage of factory by making all constructors `private` or `protected`.
+
+There are usually two major varieties of this pattern. First, one where the base class is an abstract class and doesn't hold any default implementation. Second, where the base class is a concrete class and holds a default implementation.
